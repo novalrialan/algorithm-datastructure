@@ -4,10 +4,6 @@ public class OneNotation {
     // Run Program using syntax , java OneNotation.java
     // Consept Sample - O(1)
 
-    public static void main(String[] args) {
-
-    }
-
     public void log(int[] numbers, String[] names) {
         // O(1)
         // System.out.println(numbers[0]);
@@ -70,13 +66,34 @@ public class OneNotation {
         // dan selanjutnya mencari index tengah lagi yaitu 8 dan
         // sampai mendapatkan nilai maximunya yaitu index 10.
 
-        // O(n) space --> sample 9
+    }
+
+    // O(n) space --> sample 9
+    public void greet(String[] names) {
         String[] copy = new String[names.length];
 
         for (int i = 0; i < names.length; i++) {
             System.out.println("Hi " + names[i]);
 
         }
+    }
 
+    /**
+     * ... Note ...
+     * Lookup O(1)
+     * Insert O(n)
+     * Delete O(1)
+     **/
+
+    // Running Program Use Main
+    public static void main(String[] args) {
+        // Membuat instance dari kelas Greeter
+        OneNotation greeter = new OneNotation();
+
+        // Membuat array String berisi nama-nama
+        String[] names = { "Alice", "Bob", "Charlie" };
+
+        // Memanggil metode greet dengan array names sebagai argumen
+        greeter.greet(names);
     }
 }
