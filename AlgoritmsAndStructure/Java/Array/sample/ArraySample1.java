@@ -2,7 +2,7 @@ package Array.sample;
 
 import java.util.*;
 
-public class Sample1 {
+public class ArraySample1 {
     public static void main(String[] args) {
 
         // exam --> 1
