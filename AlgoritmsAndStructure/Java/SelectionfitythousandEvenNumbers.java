@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Testing {
+public class SelectionfitythousandEvenNumbers {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
         List<Integer> evenNumber = new ArrayList<>();

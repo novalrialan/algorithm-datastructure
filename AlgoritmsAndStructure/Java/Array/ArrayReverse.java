@@ -7,7 +7,7 @@ public class ArrayReverse {
     public static void main(String[] args) {
 
         int[] numbers = { 2, 11, 5, 10, 7, 8 };
-        reverseArray(numbers, 7, numbers.length - 1);
+        reverseArray(numbers, 6, numbers.length - 1);
         System.out.println("result = " + Arrays.toString(numbers));
     }
 
