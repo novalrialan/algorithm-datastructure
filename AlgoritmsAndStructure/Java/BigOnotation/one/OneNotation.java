@@ -34,7 +34,6 @@ public class OneNotation {
             System.out.println(number);
 
         // O(n + m ) --> sample 5
-
         for (int number : numbers) // O(n)
             System.out.println(number);
 

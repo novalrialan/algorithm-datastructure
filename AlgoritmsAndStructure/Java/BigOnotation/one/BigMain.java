@@ -28,18 +28,23 @@ public class BigMain {
 
         int[] numbers = { 10, 20, 30, 40, 50, 60 };
         printArray(numbers);
-        System.out.println("index baru sudah ditambahkan");
-        numbers = add(numbers, 90);
-        printArray(numbers);
+        // System.out.println("index baru sudah ditambahkan");
+        // numbers = add(numbers, 90);
+        // printArray(numbers);
 
-        System.out.println("sudah terjadi penghapusan index pertama");
-        numbers = remove(numbers, 2);
-        printArray(numbers);
+        // System.out.println("sudah terjadi penghapusan index pertama");
+        // numbers = remove(numbers, 2);
+        // printArray(numbers);
 
-        System.out.println("sudah terjadi penghapusan index kedua");
-        numbers = remove(numbers, 3);
-        printArray(numbers);
+        // System.out.println("sudah terjadi penghapusan index kedua");
+        // numbers = remove(numbers, 3);
+        // printArray(numbers);
 
+        System.out.println("Melakukan pencarian index ");
+        int index = find(numbers, 101);
+        System.out.println("Nilai temukan pada indek : " + index);
+
+        System.out.println("Nilai Rata-Rata Array : " + calculateAverage(numbers));
     }
 
     public static void printArray(int[] array) {
@@ -67,21 +72,7 @@ public class BigMain {
             return array;
         }
 
-        // --- long consept delete ---
-        // Create a new array with one less element
-        // int[] newArray = new int[array.length - 1];
-
-        // // Copy elements up to the index to be removed
-        // for (int i = 0; i < index; i++) {
-        // newArray[i] = array[i];
-        // }
-
-        // // Skip the element at the index to be removed and copy the rest
-        // for (int x = index; x < array.length - 1; x++) {
-        // newArray[x] = array[x + 1];
-        // }
-
-        // return newArray;
+        // --- long concept delete ---
 
         int[] arr = new int[array.length - 1];
 
@@ -95,4 +86,20 @@ public class BigMain {
         return arr;
     }
 
+    public static int find(int[] array, int element) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                return i; // return index element
+            }
+        }
+        return -1;
+    }
+
+    public static double calculateAverage(int[] array) {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return (double) sum / array.length;
+    }
 }
